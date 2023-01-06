@@ -1,4 +1,4 @@
-// import Button from "react-bootstrap/Button";
+import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 function HomePageDisplay() {
@@ -7,7 +7,7 @@ function HomePageDisplay() {
         <>
             <h1>Welcome to Sales Trakr</h1>
             <Link to="/Login">
-                {/*<Button variant="success">Login</Button>*/}
+                <Button variant="success">Login</Button>*/
             {""}
           </Link>
             <img
