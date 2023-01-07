@@ -4,11 +4,13 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
+import "./index.css";
 
 
 function App() {
 
     return (
+      
         <BrowserRouter>
             <div className="App">
                 <div className="page.body">
