@@ -21,11 +21,9 @@ app.post("/addcustomer", (req, res) => {
     let newCustomer = {
         name: req.body.name,
         address: req.body.address,
-        state: req.body.state,
-        zipCode: req.body.zipCode,
-        phoneNumber: req.body.phonenumber,
-        contactName: req.body.contactname,
-        contactEmail: req.body.contactemail
+        phone_number: req.body.phonenumber,
+        contact_name: req.body.contactname,
+        contact_email: req.body.contactemail
     };
     console.log(newCustomer);
     customerDb.collection("customers").insertOne(newCustomer);
@@ -51,7 +49,7 @@ app.get("/search", (req, res) => {
                     name: { $regex: `.*${req.query.searchTerm}`, $options: "i" }
                 },
                 {
-                    state: { $regex: `.*${req.query.searchTerm}`, $options: "i" }
+                    address: { $regex: `.*${req.query.searchTerm}`, $options: "i" }
                 },
                 {
                     contactName: { $regex: `.*${req.query.searchTerm}`, $options: "i" }
