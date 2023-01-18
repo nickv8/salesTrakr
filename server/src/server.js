@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 //display all customers
-app.get("/customer", (req, res) => {
+app.get("/customers", (req, res) => {
     customerDb.collection("customers")
         .find()
         .toArray()
