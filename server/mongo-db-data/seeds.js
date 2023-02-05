@@ -1,6 +1,7 @@
 
 
-use customers;
+// use customers;
+import { customerDb, db } from "../src/customerDb";
 
 // C2bcWgGoEwHbQHapmCGCnfcrjMNkTlBX2fuqUXfXiiQwVNSgYW570YWAaVSYCVbR api key
 

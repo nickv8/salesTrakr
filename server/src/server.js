@@ -31,6 +31,13 @@ app.post("/addcustomer", (req, res) => {
 
 });
 
+//display customer details
+app.get("/customers/:id", async (req, res) => {
+    const { id } = req.params;
+    const customer = await customerDb.collection("customers").findOne({ _id: ObjectId(id) });
+    customer ? res.json(customer) : res.status(404);
+  });
+
 //delete customer
 app.delete("/customer/:id", async (req, res) => {
     const { id } = req.params;
