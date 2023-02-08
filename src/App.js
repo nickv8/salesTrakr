@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import "./index.css";
 import CustomersList from "./pages/CustomersList";
 import CustomerDetails from "./pages/CustomerDetails";
+import AddCustomer from "./pages/AddCustomer";
+import NavBar from "./components/NavBar";
 
 
 function App() {
@@ -15,12 +17,14 @@ function App() {
       
         <BrowserRouter>
             <div className="App">
+            <NavBar />
                 <div className="page.body">
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/customers" element={<CustomersList />} />
                         <Route path="/customers/:customerId" element={<CustomerDetails />} />
+                        <Route path="/customers/addcustomer" element={<AddCustomer />} />
                     </Routes>
                 </div>
             </div>

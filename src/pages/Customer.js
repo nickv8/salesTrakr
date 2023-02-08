@@ -21,7 +21,7 @@ export default function Customer(props) {
           </Row>
 
           <Button variant="success" href={`/customers/${props.customer._id}`}>
-            Learn More
+            See Details
           </Button>
         </Card.Body>
       </Card>

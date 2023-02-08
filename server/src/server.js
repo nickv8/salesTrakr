@@ -17,13 +17,13 @@ app.get("/customers", (req, res) => {
 });
 
 //add customer
-app.post("/addcustomer", (req, res) => {
+app.post("/customers", (req, res) => {
     let newCustomer = {
         name: req.body.name,
         address: req.body.address,
-        phone_number: req.body.phonenumber,
-        contact_name: req.body.contactname,
-        contact_email: req.body.contactemail
+        phone_number: req.body.phoneNumber,
+        contact_name: req.body.contactName,
+        contact_email: req.body.contactEmail
     };
     console.log(newCustomer);
     customerDb.collection("customers").insertOne(newCustomer);
@@ -39,7 +39,7 @@ app.get("/customers/:id", async (req, res) => {
   });
 
 //delete customer
-app.delete("/customer/:id", async (req, res) => {
+app.delete("/customers/:id", async (req, res) => {
     const { id } = req.params;
     const customer = await customerDb
         .collection("customers")
