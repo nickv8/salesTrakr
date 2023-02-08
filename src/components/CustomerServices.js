@@ -1,13 +1,13 @@
 const CustomerServices = {
 
-    create(customer) {
-        return fetch(`http://localhost:8000/addcustomer/`, {
-          method: "POST",
-          body: JSON.stringify(customer),
-          headers: { "Content-Type": "application/json" },
-        })
-          .then((res) => res.json())
-          .then((data) => console.log(data));
+    async create(customer) {
+        const res = await fetch(`http://localhost:8000/customers`, {
+      method: "POST",
+      body: JSON.stringify(customer),
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await res.json();
+    return console.log(data);
       },
 
     delete (customerId) {

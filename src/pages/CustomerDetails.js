@@ -84,7 +84,7 @@ export default function CustomerDetails() {
                   size="sm"
                   onClick={handleDelete}
                 >
-                  Delete this recipe
+                  Delete Customer
                 </Button>{" "}
                 </div> 
                     </div>
