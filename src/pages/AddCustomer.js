@@ -30,14 +30,14 @@ export default function AddCustomer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newRecipe = {
+    const newCustomer = {
       name: name,
       contactName: contactName,
       phoneNumber: phoneNumber,
       contactEmail: email,
       address: address,
     };
-    CustomerServices.create(newRecipe).then(() => clearState());
+    CustomerServices.create(newCustomer).then(() => clearState());
     alert("Customer Submitted");
     setTimeout(navigate('/customers'),10000)
   };
