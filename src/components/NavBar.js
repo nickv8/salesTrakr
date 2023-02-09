@@ -1,54 +1,40 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { NavDropdown } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="navbar-brand">
-          Sales Trakr
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="http://localhost:3000/">
-                Home <span class="sr-only"></span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://localhost:3000/customers">
-                List of Customers
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://localhost:3000/customers/addcustomer">
+    <Navbar bg="primary" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="http://localhost:3000/">Sales Trakr</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="http://localhost:3000/customers">
+              List of Customers
+            </Nav.Link>
+            <Nav.Link href="http://localhost:3000/customers/addcustomer">
               Add Customer
-              </a>
-            </li>
-          </ul>
-          {/* <li>
-          <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-              </li> */}
-        </div>
-      </Nav>
+            </Nav.Link>
+            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown> */}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
+    
   );
 }
 
