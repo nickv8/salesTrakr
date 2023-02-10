@@ -46,50 +46,45 @@ export default function CustomerDetails() {
               <div class="col-md-5">
                 <div class="project-info-box">
                   <p>
-                    <h3>
-                      <Badge pill bg="dark">
-                        {customer.name}{" "}
-                      </Badge>
+                    <h3
+                      style={{ color: "rgb(10, 99, 253)", paddingTop: "50px" }}
+                    >
+                      {customer.name}{" "}
                     </h3>
                   </p>
-                  
-                    <p>
-                     <b>Contact Name: </b> {customer.contact_name}
-                        </p>                                
-                            <p>
-                              <p>             
-                 
-                    <p>
-                    <b>Phone Number: </b>
-                    {customer.phone_number}
-                    </p>
-                    
-                </p>
+                  <p>
+                    <b>Contact Name: </b> {customer.contact_name}
+                  </p>
+                  <p>
                     <p>
                       <p>
-                  <p>
-                    <b>Address:</b> {customer.address}
-                  </p>
-                 
-                  <Button variant="outline-danger" size="sm" >
-                   Add Order 
-                  </Button>
-                  
-                     </p>
+                        <b>Phone Number: </b>
+                        {customer.phone_number}
+                      </p>
                     </p>
-                  </p>  
+                    <p>
+                      <p>
+                        <p>
+                          <b>Address:</b> {customer.address}
+                        </p>
 
-                  <Button
-                  variant="outline-warning"
-                  size="sm"
-                  onClick={handleDelete}
-                >
-                  Delete Customer
-                </Button>{" "}
-                </div> 
-                    </div>
-                  </div>
-                </div>  
+                        <Button
+                          variant="outline-primary"
+                          size="sm"
+                    
+                        >
+                          Edit Customer
+                        </Button>
+                      </p>
+                    </p>
+                  </p>
+                  <Button variant="danger" size="sm" onClick={handleDelete}>
+                    Delete Customer
+                  </Button>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
         </>
       )}
     </>
