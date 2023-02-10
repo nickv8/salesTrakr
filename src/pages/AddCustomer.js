@@ -52,10 +52,11 @@ export default function AddCustomer() {
                   onSubmit={handleSubmit}
                   role="form"
                   id="floating-label"
-                  style={{ position: "relative", left: "350px", paddingBottom: "10px" }}>
-          <h1> <Badge pill bg ="dark">Add New Customer</Badge></h1>
+                  style={{ position: "relative", left: "350px", paddingTop: "50px" }}>
+          <h1 style={{color: 'rgb(10, 99, 253)'}}>Add New Customer</h1>
+          <br/>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Customer Name</Form.Label>
+              {/* <Form.Label>Customer Name</Form.Label> */}
                       <Form.Control
                           type="text"
                           placeholder="Customer/Facility name"
@@ -65,7 +66,7 @@ export default function AddCustomer() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Contact Name</Form.Label>
+              {/* <Form.Label>Contact Name</Form.Label> */}
                       <Form.Control
                           type="text"
                           placeholder="Contact Name"
@@ -75,7 +76,7 @@ export default function AddCustomer() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Phone Number</Form.Label>
+              {/* <Form.Label>Phone Number</Form.Label> */}
                       <Form.Control
                           type="text"
                           placeholder="Phone Number"
@@ -88,7 +89,7 @@ export default function AddCustomer() {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Email</Form.Label>
+              {/* <Form.Label>Email</Form.Label> */}
                       <Form.Control
                           type="email"
                           placeholder="Email"
@@ -100,7 +101,7 @@ export default function AddCustomer() {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Address</Form.Label>
+              {/* <Form.Label>Address</Form.Label> */}
                       <Form.Control as="textarea"
                           rows={5}
                           placeholder="Address"
@@ -108,7 +109,7 @@ export default function AddCustomer() {
                           value={address}
                       />
             </Form.Group>
-            <Button variant="success" type="submit">
+            <Button variant="primary" type="submit">
               Submit
             </Button>
           </Form>
