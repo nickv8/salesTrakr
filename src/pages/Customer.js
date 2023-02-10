@@ -20,7 +20,7 @@ export default function Customer(props) {
           >
           </Row>
 
-          <Button variant="success" href={`/customers/${props.customer._id}`}>
+          <Button variant="primary" href={`/customers/${props.customer._id}`}>
             See Details
           </Button>
         </Card.Body>

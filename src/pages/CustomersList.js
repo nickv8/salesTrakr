@@ -17,22 +17,20 @@ export default function CustomersList() {
 
   return (
     <>
-   
-    <Container>
-      <Row>
-        <Col className="py-4">
-          <h1>
-            All Customers
-          </h1>
-        </Col>
-      </Row>
-    
-      <Row>
-      
-         {customers && customers.map((customer) => <Customer key={customer.name} customer={customer} />)}
+      <Container>
+        <Row>
+          <Col className="py-4">
+            <h1 style={{ color: "rgb(10, 99, 253)" }}>All Customers</h1>
+          </Col>
+        </Row>
 
-      </Row>
+        <Row>
+          {customers &&
+            customers.map((customer) => (
+              <Customer key={customer.name} customer={customer} />
+            ))}
+        </Row>
       </Container>
-      </>
+    </>
   );
 }
